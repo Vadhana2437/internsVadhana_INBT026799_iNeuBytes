@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop electronics, smart gadgets and accessories at NovaMart. Discover great products and special offers.">
+    <title>NovaMart | Smart Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <a href="#home" class="logo">Nova<span>Mart.</span></a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#offers">Offers</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#enquiry">Enquiry</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">YOUR EVERYDAY SHOPPING PARTNER</span>
+                <h1>Discover Products.<br>
+                    <span>Love Every Purchase.</span>
+                </h1>
+                <p>
+                    Explore quality electronics, smart gadgets and
+                    everyday accessories at exciting prices.
+                </p>
+                <a href="#products" class="btn">Shop Now →</a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-circle">🛍️</div>
+                <div class="floating-tag">✨ Amazing Deals</div>
+                <div class="floating-tag tag-bottom">Quality You Can Trust</div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits">
+            <div>🚚 <strong>Easy Shopping</strong><small>Browse with ease</small></div>
+            <div>⭐ <strong>Quality Products</strong><small>Carefully selected</small></div>
+            <div>💬 <strong>Customer Support</strong><small>We're here to help</small></div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">EXPLORE OUR STORE</span>
+                <h2>Shop by Category</h2>
+                <p>Find something you will love.</p>
+            </div>
+
+            <div class="category-grid">
+                <a href="#products" class="category-card">
+                    <span class="category-icon">🎧</span>
+                    <h3>Electronics</h3>
+                    <p>Everyday tech essentials</p>
+                </a>
+
+                <a href="#products" class="category-card">
+                    <span class="category-icon">⌚</span>
+                    <h3>Smart Gadgets</h3>
+                    <p>Technology made simple</p>
+                </a>
+
+                <a href="#products" class="category-card">
+                    <span class="category-icon">🎒</span>
+                    <h3>Accessories</h3>
+                    <p>Style meets convenience</p>
+                </a>
+
+                <a href="#products" class="category-card">
+                    <span class="category-icon">🎁</span>
+                    <h3>Gift Ideas</h3>
+                    <p>Something special for everyone</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="section products-section">
+            <div class="section-heading">
+                <span class="eyebrow">OUR COLLECTION</span>
+                <h2>Featured Products</h2>
+                <p>Explore some of our popular picks.</p>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">20% OFF</span>
+                        <img src="https://placehold.co/500x350/e9e7ff/4536a6?text=Headphones"
+                             alt="Wireless headphones" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Electronics</p>
+                        <h3>Wireless Headphones</h3>
+                        <p class="price">₹1,499 <del>₹1,899</del></p>
+                        <button class="btn enquiry-product"
+                                data-product="Wireless Headphones">
+                            Enquire Now
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">15% OFF</span>
+                        <img src="https://placehold.co/500x350/ffe7f1/a52d68?text=Smart+Watch"
+                             alt="Smart watch" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Smart Gadgets</p>
+                        <h3>Smart Watch</h3>
+                        <p class="price">₹2,499 <del>₹2,999</del></p>
+                        <button class="btn enquiry-product"
+                                data-product="Smart Watch">
+                            Enquire Now
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">10% OFF</span>
+                        <img src="https://placehold.co/500x350/dcf8e7/176443?text=Backpack"
+                             alt="Travel backpack" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Accessories</p>
+                        <h3>Travel Backpack</h3>
+                        <p class="price">₹999 <del>₹1,199</del></p>
+                        <button class="btn enquiry-product"
+                                data-product="Travel Backpack">
+                            Enquire Now
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <span class="product-badge">NEW</span>
+                        <img src="https://placehold.co/500x350/fff0d9/9a5c14?text=Bluetooth+Speaker"
+                             alt="Bluetooth speaker" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Electronics</p>
+                        <h3>Bluetooth Speaker</h3>
+                        <p class="price">₹1,199 <del>₹1,499</del></p>
+                        <button class="btn enquiry-product"
+                                data-product="Bluetooth Speaker">
+                            Enquire Now
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Offers -->
+        <section id="offers" class="offer-section">
+            <div class="offer-content">
+                <span class="eyebrow">SPECIAL COLLECTION</span>
+                <h2>Great Finds.<br>Even Better Prices.</h2>
+                <p>Explore selected products and discover exciting savings.</p>
+                <a href="#products" class="btn btn-light">Explore Products →</a>
+                <small>Offers shown are sample promotional content.</small>
+            </div>
+            <div class="offer-emoji">🎁</div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="reviews" class="section">
+            <div class="section-heading">
+                <span class="eyebrow">CUSTOMER FEEDBACK</span>
+                <h2>What People Say</h2>
+                <p>Sample testimonials for this demonstration website.</p>
+            </div>
+
+            <div class="review-grid">
+                <article class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The website is simple to navigate and products are easy to explore."</p>
+                    <h3>Priya S.</h3>
+                    <span>Sample Customer</span>
+                </article>
+
+                <article class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"I like the clean layout and the clear product information."</p>
+                    <h3>Arun K.</h3>
+                    <span>Sample Customer</span>
+                </article>
+
+                <article class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Finding the right product feels quick and straightforward."</p>
+                    <h3>Meena R.</h3>
+                    <span>Sample Customer</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Enquiry Form -->
+        <section id="enquiry" class="enquiry-section">
+            <div class="section-heading">
+                <span class="eyebrow">WE'D LOVE TO HELP</span>
+                <h2>Product Enquiry</h2>
+                <p>Tell us what you are looking for.</p>
+            </div>
+
+            <form id="enquiryForm" class="enquiry-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerName">Full Name *</label>
+                        <input type="text" id="customerName"
+                               name="customerName" placeholder="Your name"
+                               minlength="2" maxlength="80" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerEmail">Email Address *</label>
+                        <input type="email" id="customerEmail"
+                               name="customerEmail" placeholder="you@example.com"
+                               required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerPhone">Mobile Number *</label>
+                        <input type="tel" id="customerPhone"
+                               name="customerPhone"
+                               placeholder="10-digit mobile number"
+                               pattern="[6-9][0-9]{9}"
+                               title="Enter a valid 10-digit Indian mobile number"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productChoice">Select Product *</label>
+                        <select id="productChoice" name="productChoice" required>
+                            <option value="">Choose a product</option>
+                            <option>Wireless Headphones</option>
+                            <option>Smart Watch</option>
+                            <option>Travel Backpack</option>
+                            <option>Bluetooth Speaker</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerMessage">Your Message *</label>
+                    <textarea id="customerMessage" name="customerMessage"
+                              rows="5" maxlength="1000"
+                              placeholder="Write your question here..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-btn">
+                    Submit Enquiry →
+                </button>
+
+                <p id="formMessage" class="form-message"
+                   role="status" aria-live="polite"></p>
+                <p class="form-note">
+                    Demo form: your information is not sent to a server.
+                </p>
+            </form>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact-section">
+            <div class="section-heading">
+                <span class="eyebrow">GET IN TOUCH</span>
+                <h2>Contact NovaMart</h2>
+                <p>Have a question? Send us an enquiry.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span>✉️</span>
+                    <h3>Email</h3>
+                    <p>hello@novamart.example</p>
+                </div>
+                <div class="contact-card">
+                    <span>📞</span>
+                    <h3>Phone</h3>
+                    <p>+91 90000 00000</p>
+                </div>
+                <div class="contact-card">
+                    <span>📍</span>
+                    <h3>Store Location</h3>
+                    <p>Sample store location, Tamil Nadu, India</p>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    title="Map of Tamil Nadu, India"
+                    src="https://maps.google.com/maps?q=Tamil%20Nadu%2C%20India&t=&z=7&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p class="map-note">Map is for demonstration; replace with your actual store location.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div>
+                <a href="#home" class="logo footer-logo">Nova<span>Mart.</span></a>
+                <p>Your everyday shopping, made simple.</p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#offers">Offers</a>
+            </div>
+
+            <div>
+                <h3>Customer Care</h3>
+                <a href="#enquiry">Product Enquiry</a>
+                <a href="#reviews">Customer Reviews</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="currentYear">2026</span> NovaMart. All rights reserved.</p>
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+
+</body>
+</html>
