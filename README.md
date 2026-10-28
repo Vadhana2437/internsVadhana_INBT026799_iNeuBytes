@@ -1,40 +1,72 @@
-# NovaMart – E-commerce Product Landing Page
+# NovaMart — iNeuBytes Web Development Internship
 
-## Internship Details
-- **Internship:** iNeuBytes – Web Development
+A collection of three web development tasks completed as part of the iNeuBytes Web Development Internship.
+
+## 👩‍💻 Internship Details
+
+- **Intern Name:** Vadhana A S
+- **Registration Number:** 24243030
 - **Course ID:** wbINB10926
-- **Task:** Task 1 – E-commerce Product Landing Page
-- **Name:** [Your registered name]
-- **Registration Number:** [Your registration number]
+- **Internship Domain:** Web Development
+- **Project Name:** NovaMart
 
-## Project Description
-NovaMart is a responsive e-commerce product landing page developed using HTML, CSS, and JavaScript. It presents product categories, featured products, offers, customer testimonials, and a product enquiry form.
+## 📁 Repository Structure
 
-## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
+```text
+Repository/
+├── Major-Project/
+│   ├── README.md
+│   ├── Application files
+│   ├── Backend files
+│   ├── Database
+│   ├── Project report
+│   └── Demo video
+├── Task-1/
+│   ├── README.md
+│   ├── Landing page files
+│   ├── Screenshots
+│   └── Demo video
+├── Task-2/
+│   ├── README.md
+│   ├── Product catalog files
+│   ├── Screenshots
+│   └── Demo video
+└── README.md
+```
 
-## Features
-- Responsive navigation
-- Product categories and featured products
-- Offers and testimonials sections
+## 🚀 Task 1: E-Commerce Product Landing Page
+
+Developed a responsive product landing page using HTML, CSS, and JavaScript.
+
+**Features**
+- Home page and product categories
+- Featured products and promotional offers
+- Customer testimonials
 - Product enquiry form with client-side validation
-- Product-specific enquiry selection
-- Contact information and Google Maps embed
+- Responsive desktop and mobile layouts
 
-## Project Files
-- `index.html` – Website structure
-- `style.css` – Styling and responsive layout
-- `script.js` – Navigation and form interactions
-- `screenshots/` – Project screenshots
-- `demo-video.mp4` – Project demonstration
+## 🛒 Task 2: Product Catalog & Shopping Cart System
 
-## Testing
-The navigation, product enquiry selection, form validation, successful form submission message, mobile layout, product images, and map were tested.
+Developed an interactive product catalogue and shopping cart using HTML, CSS, and JavaScript.
 
-## Limitation
-The enquiry form is a front-end demonstration. It does not send or store enquiries on a server.
+**Features**
+- Product search and category filtering
+- Product details popup
+- Product sorting
+- Add and remove cart items
+- Quantity updates and automatic total calculation
+- Cart persistence using browser Local Storage
+- Responsive user interface
 
-## Conclusion
-This project helped me practise HTML, CSS, JavaScript, responsive web design, and client-side form validation.
+## 🏬 Major Project: NovaMart Full-Stack E-Commerce Application
+
+Developed a full-stack e-commerce application connecting a web frontend with a Node.js and Express backend.
+
+**Features**
+- User registration and login
+- Product catalogue, search, filtering, and sorting
+- Shopping cart and checkout
+- Customer order history
+- Product management for authorized users
+- Order management and status updates
+- Inventory stock
