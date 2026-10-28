@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaMart | E-commerce Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="brand" id="homeLink">Nova<span>Mart</span></a>
+
+    <nav>
+      <a href="#store" id="storeNav">Store</a>
+      <a href="#cartSection" id="cartNav" class="hidden">Cart</a>
+      <a href="#ordersSection" id="ordersNav" class="hidden">My Orders</a>
+      <a href="#manage" id="manageNav" class="hidden">Manage Products</a>
+      <a href="#ordersSection" id="adminOrdersNav" class="hidden">Orders</a>
+    </nav>
+
+    <div class="nav-actions">
+      <span id="userBadge" class="user-badge hidden"></span>
+      <button id="loginNav" class="secondary-btn">Login</button>
+      <button id="registerNav" class="primary-btn">Register</button>
+      <button id="logoutBtn" class="secondary-btn hidden">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="authSection" class="auth-layout">
+      <div class="auth-intro">
+        <span class="eyebrow">WELCOME TO NOVAMART</span>
+        <h1>Your marketplace.<br><span>Your possibilities.</span></h1>
+        <p>Browse products, manage inventory and enjoy a simple shopping experience.</p>
+        <div class="auth-benefits">
+          <p>✓ Easy product browsing</p>
+          <p>✓ Secure password-based login</p>
+          <p>✓ Role-based access</p>
+        </div>
+      </div>
+
+      <div class="auth-card">
+        <div class="auth-tabs">
+          <button type="button" id="showLogin" class="auth-tab active">Login</button>
+          <button type="button" id="showRegister" class="auth-tab">Register</button>
+        </div>
+
+        <form id="loginForm">
+          <h2>Welcome back!</h2>
+          <p class="muted">Login to your NovaMart account.</p>
+
+          <label for="loginEmail">Email address</label>
+          <input id="loginEmail" type="email" autocomplete="email"
+                 placeholder="you@example.com" required>
+
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password"
+                 autocomplete="current-password" placeholder="Enter password" required>
+
+          <button type="submit" id="loginSubmit" class="primary-btn full-btn">Login</button>
+          <p id="loginMessage" class="form-message" role="status"></p>
+        </form>
+
+        <form id="registerForm" class="hidden">
+          <h2>Create account</h2>
+          <p class="muted">Join the NovaMart marketplace.</p>
+
+          <label for="registerName">Full name</label>
+          <input id="registerName" maxlength="100" autocomplete="name"
+                 placeholder="Your name" required>
+
+          <label for="registerEmail">Email address</label>
+          <input id="registerEmail" type="email" autocomplete="email"
+                 placeholder="you@example.com" required>
+
+          <label for="registerPassword">Password</label>
+          <input id="registerPassword" type="password" minlength="8"
+                 maxlength="72" autocomplete="new-password"
+                 placeholder="At least 8 characters" required>
+
+          <label for="registerRole">Account type</label>
+          <select id="registerRole" required>
+            <option value="customer">Customer</option>
+            <option value="reseller">Reseller</option>
+          </select>
+
+          <p class="hint">Admin accounts are created separately by the system administrator.</p>
+          <button type="submit" id="registerSubmit" class="primary-btn full-btn">Create Account</button>
+          <p id="registerMessage" class="form-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="dashboardSection" class="hidden">
+      <div class="dashboard-hero">
+        <div>
+          <span class="eyebrow">YOUR NOVAMART DASHBOARD</span>
+          <h1 id="welcomeTitle">Welcome!</h1>
+          <p id="roleDescription">Manage your marketplace activity.</p>
+        </div>
+        <span id="roleBadge" class="role-badge">Customer</span>
+      </div>
+
+      <div class="dashboard-stats">
+        <article class="stat-card">
+          <span>🛍️</span>
+          <div><strong id="statProducts">0</strong><p>Available products</p></div>
+        </article>
+        <article class="stat-card">
+          <span>🛒</span>
+          <div><strong id="statCart">0</strong><p>Items in cart</p></div>
+        </article>
+        <article class="stat-card">
+          <span>👤</span>
+          <div><strong id="statRole">Customer</strong><p>Your account role</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="store" class="catalog-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">EXPLORE THE COLLECTION</span>
+          <h2>Our Products</h2>
+          <p>Search and discover products available in the store.</p>
+        </div>
+        <span id="productCount" class="count-badge">0 products</span>
+      </div>
+
+      <div class="toolbar">
+        <input id="searchInput" type="search" placeholder="🔍 Search products..."
+               aria-label="Search products">
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+        </select>
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="default">Sort: Default</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+
+      <p id="catalogMessage" class="form-message" role="status"></p>
+      <div id="productList" class="product-grid">
+        <div class="empty-state">Loading products...</div>
+      </div>
+    </section>
+
+    <section id="cartSection" class="cart-section hidden">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">YOUR SELECTION</span>
+          <h2>Shopping Cart</h2>
+          <p>Review your selected items before ordering.</p>
+        </div>
+      </div>
+
+      <div id="cartItems"></div>
+
+      <div class="cart-total">
+        <strong>Cart Total</strong>
+        <strong id="cartTotal">₹0.00</strong>
+      </div>
+
+      <button id="checkoutBtn" class="primary-btn full-btn">
+        Checkout / Place Order
+      </button>
+      <p id="checkoutMessage" class="form-message" role="status"></p>
+    </section>
+
+    <section id="ordersSection" class="cart-section hidden">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow" id="ordersEyebrow">ORDER HISTORY</span>
+          <h2 id="ordersTitle">My Orders</h2>
+          <p id="ordersDescription">View your orders and track their status.</p>
+        </div>
+        <button id="refreshOrdersBtn" class="secondary-btn">Refresh Orders</button>
+      </div>
+
+      <p id="ordersMessage" class="form-message" role="status"></p>
+      <div id="ordersList">
+        <div class="empty-state">No orders loaded yet.</div>
+      </div>
+    </section>
+
+    <section id="manage" class="management-section hidden">
+      <div class="management-info">
+        <span class="eyebrow">PRODUCT MANAGEMENT</span>
+        <h2>Manage your products</h2>
+        <p>Resellers and administrators can add, edit and delete catalogue products.</p>
+        <p class="hint">Changes are saved through the backend product API.</p>
+      </div>
+
+      <form id="productForm" class="product-form">
+        <h3 id="productFormTitle">Add New Product</h3>
+
+        <label for="productName">Product name</label>
+        <input id="productName" maxlength="100" required placeholder="Wireless Headphones">
+
+        <label for="productCategory">Category</label>
+        <input id="productCategory" maxlength="60" required placeholder="Electronics">
+
+        <div class="form-row">
+          <div>
+            <label for="productPrice">Price (₹)</label>
+            <input id="productPrice" type="number" min="0" step="0.01" required>
+          </div>
+          <div>
+            <label for="productStock">Stock</label>
+            <input id="productStock" type="number" min="0" step="1" required>
+          </div>
+        </div>
+
+        <button type="submit" id="productSubmit" class="primary-btn full-btn">Add Product</button>
+        <button type="button" id="cancelEdit" class="secondary-btn full-btn hidden">Cancel Edit</button>
+        <p id="productMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="brand footer-brand">Nova<span>Mart</span></a>
+    <p>Smart shopping and simple product management.</p>
+    <small>© 2026 NovaMart · Web Development Internship Project</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
