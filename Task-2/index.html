@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaMart product catalog and shopping cart demo">
+  <title>NovaMart | Shop Online</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">Nova<span>Mart.</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#catalog">Products</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-button" id="cartToggle" aria-label="Open shopping cart">
+        🛒 Cart <span id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR EVERYDAY SHOPPING PARTNER</p>
+        <h1>Find Your Favorites.<br><span>Love Every Purchase.</span></h1>
+        <p>Discover useful gadgets, accessories and everyday essentials at great prices.</p>
+        <a class="primary-button" href="#catalog">Explore Products →</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <span>🛍️</span>
+        <span>🎧</span>
+        <span>⌚</span>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span>🚚</span><strong>Easy Shopping</strong><small>Browse with ease</small></div>
+      <div><span>⭐</span><strong>Quality Products</strong><small>Carefully selected</small></div>
+      <div><span>🔒</span><strong>Simple & Safe Demo</strong><small>No payment required</small></div>
+    </section>
+
+    <section class="catalog-section" id="catalog">
+      <div class="section-heading">
+        <p class="eyebrow">OUR COLLECTION</p>
+        <h2>Explore Products</h2>
+        <p>Find something you'll love.</p>
+      </div>
+
+      <div class="catalog-controls">
+        <label class="search-box">
+          <span>🔎</span>
+          <input type="search" id="searchInput" placeholder="Search products..." aria-label="Search products">
+        </label>
+
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="All">All Categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Smart Gadgets">Smart Gadgets</option>
+          <option value="Accessories">Accessories</option>
+        </select>
+
+        <select id="sortFilter" aria-label="Sort products">
+          <option value="default">Sort: Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+
+      <p class="result-count" id="resultCount" aria-live="polite"></p>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-message hidden" id="noProducts">No products found. Try another search.</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-icon">💜</div>
+      <div>
+        <h2>Shopping made simple</h2>
+        <p>NovaMart is a demonstration e-commerce website built with HTML, CSS and JavaScript. Explore products, manage your cart and calculate your total instantly.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="overlay hidden" id="overlay"></div>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-heading">
+      <div>
+        <p class="eyebrow">YOUR SELECTION</p>
+        <h2>Shopping Cart</h2>
+      </div>
+      <button class="close-button" id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+      <span>🛒</span>
+      <h3>Your cart is empty</h3>
+      <p>Add a product to get started.</p>
+      <button class="primary-button" id="continueShopping">Continue Shopping</button>
+    </div>
+
+    <div class="cart-summary" id="cartSummary">
+      <div class="summary-line">
+        <span>Subtotal</span><strong id="cartSubtotal">₹0</strong>
+      </div>
+      <div class="summary-line">
+        <span>Delivery</span><strong id="deliveryCost">Free</strong>
+      </div>
+      <div class="summary-line total-line">
+        <span>Total</span><strong id="cartTotal">₹0</strong>
+      </div>
+      <button class="checkout-button" id="checkoutButton">Proceed to Checkout →</button>
+      <p class="demo-note">Demo only — no real payment will be collected.</p>
+    </div>
+  </aside>
+
+  <dialog class="product-dialog" id="productDialog">
+    <button class="close-button dialog-close" id="closeDialog" aria-label="Close product details">✕</button>
+    <div id="productDetails"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">
+    <a class="logo footer-logo" href="#home">Nova<span>Mart.</span></a>
+    <p>A simple shopping experience, built for learning.</p>
+    <p>© <span id="currentYear"></span> NovaMart. Demo project.</p>
+  </footer>
+</body>
+</html>
